@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Lista de Artistas</h1>
+    <a href="{% url 'artista-create' %}"> Cadastrar Artistas</a>
+    {% if artista_list %}
+        <ul>
+            {% for artista in artista_list %}
+                <li>
+                    <a href="{{ artista.get_absolute_url }}">
+                        {{artista.nome}}
+                        <a href="{% url 'artista-update' artista.id%}"> - Atualizar</a>
+                        <a href="{% url 'artista-delete' artista.id%}"> - Excluir</a>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não existem Artistas cadastrados.</p>
+    {% endif %}
+{% endblock %}

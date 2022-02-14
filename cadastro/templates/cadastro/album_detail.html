@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h4><strong>Nome:</strong> {{ album.nome }}</h4>
+    <p><strong>Data de lancamento:</strong> {{ album.data_lancamento }}</p>
+    <p><strong>Nota:</strong> {{ album.nota }}</p>
+
+    <h5>Musicas:</h5>
+        {% for musica in album.musica_set.all %}
+            <p><strong>Musica:</strong> {{ musica.nome }}</p>
+            <p><strong>Nota:</strong> {{ musica.nota }}</p>
+            <p><strong>Data lancamento:</strong> {{ musica.data_lancamento }}</p>
+            <br>
+        {% endfor %}</p>
+{% endblock %}

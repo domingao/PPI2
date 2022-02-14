@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h4><strong>Nome da musica:</strong> {{ musica.nome }} </h4>
+    <p><strong>Artista:</strong> {{ musica.artista.nome }}</p>
+    <p><strong>Album:</strong> {{ musica.album.nome }}</p>
+    <p><strong>Nota:</strong> {{ musica.nota }}</p>
+    <p><strong>Data de lancamento:</strong> {{ musica.data_lancamento }}</p>
+
+{% endblock %}

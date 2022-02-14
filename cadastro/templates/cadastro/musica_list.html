@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Lista de Musicas</h1>
+    <a href="{% url 'musica-create' %}"> Cadastrar Musicas</a>
+    {% if musica_list %}
+        <ul>
+            {% for musica in musica_list %}
+                <li>
+                    <a href="{{ musica.get_absolute_url }}">
+                        {{musica.nome}}
+                        <a href="{% url 'musica-update' musica.id%}"> - Atualizar</a>
+                        <a href="{% url 'musica-delete' musica.id%}"> - Excluir</a>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não existem Musicas cadastrados.</p>
+    {% endif %}
+{% endblock %}

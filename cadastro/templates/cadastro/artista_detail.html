@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h4> <strong>Nome:</strong> {{ artista.nome }}</h4>
+    <p><strong>Categoria:</strong> {{ artista.categoria }}</p>
+    <p><strong>Data de nascimento:</strong> {{ artista.data_nascimento }}</p>
+
+    <h5>Musicas:</h5>
+        {% for musica in artista.musica_set.all %}
+            <p><strong>Musica:</strong> {{ musica.nome }}</p>
+            <p><strong>Nota:</strong> {{ musica.nota }}</p>
+            <br>
+        {% endfor %}</p>
+{% endblock %}

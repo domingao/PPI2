@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Lista de Albuns</h1>
+    <a href="{% url 'album-create' %}"> Cadastrar Albuns</a>
+    {% if album_list %}
+        <ul>
+            {% for album in album_list %}
+                <li>
+                    <a href="{{ album.get_absolute_url }}">
+                        {{album.nome}}
+                        <a href="{% url 'album-update' album.id%}"> - Atualizar</a>
+                        <a href="{% url 'album-delete' album.id%}"> - Excluir</a>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não existem Albuns cadastrados.</p>
+    {% endif %}
+{% endblock %}

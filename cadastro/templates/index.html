@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+<!-- Reescreva os blocos que deseja substituir em base.html -->
+{% block content %}
+
+    <h1 >Página inicial</h1>
+
+    <h3>O sistema de cadastro de artistas tem os seguintes registros:</h3>
+    <ul>
+        <li><strong>Artistas:</strong> {{ num_artistas }}</li>
+        <li><strong>Musicas:</strong> {{ num_musicas }}</li>
+        <li><strong>Albuns:</strong> {{ num_albuns }}</li>
+    </ul>
+
+{% endblock %}

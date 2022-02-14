@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Apagar Musica</h1>
+
+<p>Tem certeza que quer excluir essa Musica: {{ musica.nome }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Sim, excluir.">
+</form>
+
+{% endblock %}
