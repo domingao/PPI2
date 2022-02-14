@@ -1,2 +1,1 @@
-# inst-ensino
-![alt text](https://github.com/denilsonfbar/inst-ensino/blob/master/diagrama.jpg?raw=true)
+https://github.com/domingao/PPI2/blob/main/Diagrama.PNG
